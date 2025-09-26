@@ -21,7 +21,9 @@ def dictionnaire_utilisateurs_livre(lst_user,lst_aime_livrea):
     return dictio
    
 def affichage_dictionnaire(dictio):
-     
+    for info in dictio.values():
+        livres_names = "', '".join(info["livres"])
+        print(f"{info['nom_complet']} ({info['age']} ans) aime : '{livres_names}'")
 
 
 # adultes = list(filter(filter_utilisateur_adultes, utilisateurs))
@@ -30,3 +32,4 @@ def affichage_dictionnaire(dictio):
 # print(noms_maj)
 dictionnaire=dictionnaire_utilisateurs_livre(utilisateurs,aime_livres)
 print(dictionnaire)
+affichage_dictionnaire(dictionnaire)
