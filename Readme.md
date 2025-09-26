@@ -1,3 +1,3 @@
 # Projet
 
-[Some title here](projet.pdf)
+[Enonce du projet](projet.pdf)
