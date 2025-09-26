@@ -20,7 +20,8 @@ def dictionnaire_utilisateurs_livre(lst_user,lst_aime_livrea):
     }
     return dictio
    
-def afficha
+def affichage_dictionnaire(dictio):
+     
 
 
 # adultes = list(filter(filter_utilisateur_adultes, utilisateurs))
