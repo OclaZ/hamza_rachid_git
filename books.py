@@ -3,6 +3,7 @@ import data
 aimeLivers = data.aime_livres
 Livres = data.livres
 Users = data.utilisateurs
+
 Livres.sort(key=lambda x: x["année"], reverse=True)
 print(Livres)
 
@@ -30,12 +31,8 @@ def dectionaire(MyList):
 def dexupardeux(MyList):
     i =0;
     while i < len(MyList):
-        print(f"Page {(i//2)+1} :")
+        print(f"------ {(i//2)+1} :")
         print(MyList[i])
-        if i+1 < len(MyList):
-            print(MyList[i+1])
+        print(MyList[i+1])
         i+=2
 
-Récent_Ancien(Livres)
-dectionaire(aimeLivers)
-dexupardeux(Users)
