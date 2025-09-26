@@ -28,11 +28,7 @@ def dictionnaire_utilisateurs_livre(lst_user,lst_aime_livre):
     }
     return dictio
 
-def affichage_dictionnaire(lst_user,lst_aime_livre):
-     dictionnaire=dictionnaire_utilisateurs_livre(utilisateurs,aime_livres)
-     print(dictionnaire)
-
-def affichage_dictionnaire_formated(dictio):
+def affichage_dictionnaire(dictio):
     for info in dictio.values():
         livres_names = "', '".join(info["livres"])
         print(f"{info['nom_complet']} ({info['age']} ans) aime : '{livres_names}'")

@@ -9,7 +9,7 @@ users.affichage_utilisateur_adultes(user)
 users.affichage_noms_en_majuscule(user)
 dic=users.dictionnaire_utilisateurs_livre(user,aime_livre)
 print(dic)
-users.affichage_dictionnaire(user,aime_livre)
+users.affichage_dictionnaire(dic)
 
 
 
