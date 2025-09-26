@@ -5,8 +5,16 @@ def filter_utilisateur_adultes(users):
         if users[3] >= 18:
             return True
 
+def affichage_utilisateur_adultes(users):
+     adultes=list(filter(filter_utilisateur_adultes, users))
+     print(adultes)
+
 def noms_en_majuscule(users):
     return users[1].upper() , users[2].upper()
+
+def affichage_noms_en_majuscule(users):
+     noms_maj=list(map(noms_en_majuscule, utilisateurs))
+     print(noms_maj)
 
 def dictionnaire_utilisateurs_livre(lst_user,lst_aime_livre):
     dictio={}
@@ -19,17 +27,12 @@ def dictionnaire_utilisateurs_livre(lst_user,lst_aime_livre):
             "livres": livres_aimes
     }
     return dictio
-   
-def affichage_dictionnaire(dictio):
+
+def affichage_dictionnaire(lst_user,lst_aime_livre):
+     dictionnaire=dictionnaire_utilisateurs_livre(utilisateurs,aime_livres)
+     print(dictionnaire)
+
+def affichage_dictionnaire_formated(dictio):
     for info in dictio.values():
         livres_names = "', '".join(info["livres"])
         print(f"{info['nom_complet']} ({info['age']} ans) aime : '{livres_names}'")
-
-
-# adultes = list(filter(filter_utilisateur_adultes, utilisateurs))
-# print(adultes)
-# noms_maj=list(map(noms_en_majuscule, utilisateurs))
-# print(noms_maj)
-dictionnaire=dictionnaire_utilisateurs_livre(utilisateurs,aime_livres)
-print(dictionnaire)
-affichage_dictionnaire(dictionnaire)
